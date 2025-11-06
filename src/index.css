@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-synthesis: none;
+}
+
+/* ✅ Base Reset + Global Styles */
+
+/* Box sizing setup */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Improve text rendering and layout defaults */
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', 'Inter', 'Poppins', 'Roboto', sans-serif;
+  /* line-height: 1.5; */
+  -webkit-font-smoothing: antialiased;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Responsive media */
+/* img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+} */
+
+/* Remove default list and link styles */
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make form elements consistent */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Root variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --bg-light: #f9f9f9;
+  --text-dark: #222;
+  --font-size-base: 16px;
+}
+
+/* Optional global button style */
+button {
+  cursor: pointer;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #f7486d;
+}

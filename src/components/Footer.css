@@ -1,0 +1,141 @@
+/* ===========================
+   FOOTER STYLING
+   =========================== */
+footer {
+  background-color: #f9f7fb;
+  padding: 4rem 8%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  position: relative;
+  z-index: 10;
+}
+
+footer h2 {
+  font-family: 'Playfair Display', serif;
+  color: #5D3A6A;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+footer h3 {
+  color: #5D3A6A;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.6rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+footer ul li button {
+  background: none;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+footer ul li button:hover {
+  color: #5D3A6A;
+}
+
+/* -------- Social Icons -------- */
+footer div:last-child div svg {
+  font-size: 1.5rem;
+  color: #5D3A6A;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer div:last-child div svg:hover {
+  color: #ff7b93;
+  transform: scale(1.1);
+}
+
+/* -------- Bottom bar -------- */
+footer hr {
+  grid-column: 1 / -1;
+  border: none;
+  height: 1px;
+  background-color: rgba(93, 58, 106, 0.2);
+  margin: 2rem 0;
+}
+
+footer>div:last-child {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+footer>div:last-child div {
+  margin-top: 0.5rem;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 1024px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 6%;
+    text-align: left;
+  }
+
+  footer>div:last-child {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2.5rem 5%;
+  }
+
+  footer div:last-child div svg {
+    margin-right: 0.8rem;
+  }
+
+  footer h2 {
+    font-size: 1.6rem;
+  }
+
+  footer h3 {
+    font-size: 1.1rem;
+  }
+
+  footer p,
+  footer ul li {
+    font-size: 0.9rem;
+  }
+
+  footer>div:last-child {
+    flex-direction: column;
+    text-align: center;
+  }
+}

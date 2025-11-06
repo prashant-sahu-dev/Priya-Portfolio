@@ -1,0 +1,193 @@
+/* ---------- SECTION BASE ---------- */
+.portfolio-section {
+  padding: 6rem 8%;
+  background-color: #FFF5FF;
+  text-align: center;
+  color: #333;
+}
+
+.portfolio-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #5D3A6A;
+  margin-bottom: 1rem;
+}
+
+.portfolio-section p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* ---------- FILTER BUTTONS ---------- */
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.portfolio-filters button {
+  background-color: transparent;
+  border: 2px solid #E0B0FF;
+  color: #5D3A6A;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-filters button:hover,
+.portfolio-filters button.active {
+  background-color: #E0B0FF;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ---------- GALLERY GRID ---------- */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+/* ---------- IMAGE CARD ---------- */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 100%;
+  height: 320px; /* fixed height for uniform layout */
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures no stretching */
+  transition: transform 0.5s ease;
+  display: block;
+  border-radius: 15px;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ---------- OVERLAY FOR ALT TEXT + CATEGORY ---------- */
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  text-transform: capitalize;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-overlay .alt-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* ---------- ANIMATION FOR FILTERING ---------- */
+.portfolio-gallery {
+  transition: all 0.4s ease;
+}
+
+.portfolio-card {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.portfolio-card.hide {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+@media (max-width: 1024px) {
+  .portfolio-section {
+    padding: 5rem 6%;
+  }
+  .portfolio-section h2 {
+    font-size: 2.2rem;
+  }
+  .portfolio-card {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 4rem 5%;
+  }
+
+  .portfolio-filters button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .portfolio-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .portfolio-section p {
+    font-size: 0.95rem;
+  }
+
+  .portfolio-card {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding: 3rem 4%;
+  }
+
+  .portfolio-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-filters {
+    gap: 0.5rem;
+  }
+
+  .portfolio-filters button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .portfolio-card {
+    height: 200px;
+  }
+}

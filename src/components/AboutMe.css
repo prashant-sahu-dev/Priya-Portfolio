@@ -1,0 +1,126 @@
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 8%;
+    gap: 4rem;
+    background-color: #FFF5FF;
+    color: #374151;
+    height: 100vh;
+    /* Full viewport height */
+
+}
+
+.about-me-image,
+.about-me-content {
+    flex: 1;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-me-content h2 {
+    font-size: 1.5rem;
+    color: #5D3A6A;
+    margin-bottom: 1rem;
+}
+
+.about-me-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #5D3A6A;
+}
+
+.about-me-content p {
+    font-size: 1rem;
+    line-height: 1.625;
+    margin-bottom: 1rem;
+}
+
+.about-me-image{
+    position: relative;  /* ye zaroori hai */
+    height : 90% ;
+}
+
+.about-me-image-overlay {
+  width: 250px;
+  position: absolute;
+  bottom: 20px;      /* image ke bottom se distance */
+  right: 10px;       /* image ke right se distance */
+  background: rgba(255, 255, 255, 0.25); /* semi-transparent */
+  backdrop-filter: blur(8px); /* glass effect */
+  border-radius: 12px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.about-me-image-overlay {
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.about-me-image:hover .about-me-image-overlay {
+  transform: translateY(0);
+}
+.about-me-image-overlay h4 {
+   color : #F6667F ;
+   font-size: 1.2rem ;
+}
+
+.about-me-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-me-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.about-me-stat-item {
+    /* border: 2px solid #F2F2F2; */
+    color: #374151;
+    border-radius: 30px;
+    height: 150px;
+    width: 176px;
+    /* padding: 0.5rem 0.5rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-around;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); */
+}
+.about-me-stat-item h4 {
+    color:black ;
+    
+}
+.about-me-stat-item p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column-reverse;
+        height: auto;
+        /* allow scrolling on small devices */
+        padding: 3rem 5%;
+    }
+
+    .about-me-image img {
+        height: 300px;
+    }
+}
