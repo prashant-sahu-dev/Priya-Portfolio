@@ -4,13 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center ;
-  height: 100vh;
+   height: auto; /* so content adjusts naturally */
+  min-height: 100vh; /* ensure full viewport at least */
   padding: 0 8%;
   background-color: transparent;
   gap: 2rem;
   overflow: hidden; /* safety: image bahar na nikle */
   font-family: 'open-sans', sans-serif ;
-  position:absolute ;
+  position:relative ;
   top:110px ;
 }
 
@@ -172,6 +173,7 @@
 
 @media (max-width: 992px) {
   .hero {
+    
     flex-direction: column;
     align-items: center;
     height: auto;

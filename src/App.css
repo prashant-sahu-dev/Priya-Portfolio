@@ -3,6 +3,7 @@
   min-height: 115vh;
   width: 100%;
   overflow: hidden;
+  z-index: 1;
 }
 
 /* Background image with overlay layer */
