@@ -63,7 +63,7 @@
   line-height: 2.25rem;
   font-weight: 300 ;
   font-style: italic ;
-  font-family: 'monospace';
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* -------- BUTTONS -------- */
@@ -224,6 +224,9 @@
 
   #hero-subtitle {
     font-size: 2.1rem;
+    line-height: 2.25rem;
+    font-weight: 300;
+    font-style: italic;
   }
 
   .hero-content p {
