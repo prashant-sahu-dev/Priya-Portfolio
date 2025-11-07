@@ -41,39 +41,48 @@
     margin-bottom: 1rem;
 }
 
-.about-me-image{
-    position: relative;  /* ye zaroori hai */
-    height : 90% ;
+.about-me-image {
+    position: relative;
+    /* ye zaroori hai */
+    height: 90%;
 }
 
 .about-me-image-overlay {
-  width: 250px;
-  position: absolute;
-  bottom: 20px;      /* image ke bottom se distance */
-  right: 10px;       /* image ke right se distance */
-  background: rgba(255, 255, 255, 0.25); /* semi-transparent */
-  backdrop-filter: blur(8px); /* glass effect */
-  border-radius: 12px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: #fff;
-  font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    width: 374px;
+    height: 109px;
+    position: absolute;
+    bottom: -11px;
+    /* image ke bottom se distance */
+    right: -17px;
+    /* image ke right se distance */
+    background: rgba(255, 255, 255);
+    /* semi-transparent */
+    backdrop-filter: blur(8px);
+    /* glass effect */
+    border-radius: 12px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    gap: 5px;
+    color: #6b6b6b;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .about-me-image-overlay {
-  transform: translateY(10px);
-  transition: all 0.4s ease;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
 }
 
 .about-me-image:hover .about-me-image-overlay {
-  transform: translateY(0);
+    transform: translateY(0);
 }
+
 .about-me-image-overlay h4 {
-   color : #F6667F ;
-   font-size: 1.2rem ;
+    color: #F6667F;
+    font-size: 2rem;
 }
 
 .about-me-image img {
@@ -86,7 +95,7 @@
 .about-me-stats {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -103,10 +112,12 @@
     justify-content: space-around;
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); */
 }
+
 .about-me-stat-item h4 {
-    color:black ;
-    
+    color: black;
+
 }
+
 .about-me-stat-item p {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -123,4 +134,52 @@
     .about-me-image img {
         height: 300px;
     }
+
+    .about-me-stats {
+        display: flex;
+        flex-direction: column;
+        /* mobile: stack vertically */
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .about-me-stat-item {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        width: 100%;
+        max-width: 420px;
+        /* card max width on mobile */
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(93, 58, 106, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .about-me-stat-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 700;
 }
+
+.about-me-stat-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+/* Slight hover/tap feedback */
+.about-me-stat-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.09);
+}
+}
+
+
+/*-----------------------------*/

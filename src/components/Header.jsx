@@ -20,11 +20,24 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ✅ Smooth scroll function
+  const handleScrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMenuOpen(false); // Close mobile nav after click
+    }
+  };
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <header className="header transparent">
-      <div className="logo">
+      <div
+        className="logo"
+        onClick={() => handleScrollToSection("hero")}
+        style={{ cursor: "pointer" }}
+      >
         <div className="logo-icon">
           <LuSparkles size={35} color="#5D3A6A" />
         </div>
@@ -36,11 +49,35 @@ const Header = () => {
 
       {/* ✅ Desktop Navigation */}
       <nav className={`nav ${menuOpen ? "active" : ""}`}>
-        <button className="nav-link">About</button>
-        <button className="nav-link">Portfolio</button>
-        <button className="nav-link">Services</button>
-        <button className="nav-link">Testimonial</button>
-        <button className="nav-link" id="book-now">
+        <button
+          className="nav-link"
+          onClick={() => handleScrollToSection("about")}
+        >
+          About
+        </button>
+        <button
+          className="nav-link"
+          onClick={() => handleScrollToSection("portfolio")}
+        >
+          Portfolio
+        </button>
+        <button
+          className="nav-link"
+          onClick={() => handleScrollToSection("services")}
+        >
+          Services
+        </button>
+        <button
+          className="nav-link"
+          onClick={() => handleScrollToSection("testimonials")}
+        >
+          Testimonial
+        </button>
+        <button
+          className="nav-link"
+          id="book-now"
+          onClick={() => handleScrollToSection("contact")}
+        >
           <div>
             <LuSparkles color="#ffffff" />
           </div>

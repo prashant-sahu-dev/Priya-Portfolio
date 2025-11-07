@@ -5,6 +5,15 @@ import { FiUsers } from "react-icons/fi";
 import { FaRegStar } from "react-icons/fa6" ;
 
 const Hero = () => {
+    // ✅ Smooth scroll function
+  const handleScrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMenuOpen(false); // Close mobile nav after click
+    }
+  };
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -20,8 +29,8 @@ const Hero = () => {
           with personalized service at your doorstep.
         </p>
         <div className="hero-buttons">
-          <button className="cta-btn"><LuSparkles color="white" /> Book Now</button>
-          <button className="secondary-btn">View Portfolio</button>
+          <button className="cta-btn" onClick={() => handleScrollToSection("contact")}><LuSparkles color="white"/> Book Now</button>
+          <button className="secondary-btn" onClick={() => handleScrollToSection("portfolio")}>View Portfolio</button>
         </div>
         <div className="hero-stats">
           <div className="stat-item">

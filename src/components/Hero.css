@@ -58,10 +58,11 @@
 }
 
 #hero-subtitle {
-  font-size: 1.875rem;
+  font-size: 2.1rem;
   line-height: 2.25rem;
   font-weight: 300 ;
   font-style: italic ;
+  font-family: 'monospace';
 }
 
 /* -------- BUTTONS -------- */
@@ -141,7 +142,7 @@
   border: 2px solid #F2F2F2;
   color: #374151 ;
   border-radius: 30px;
-  height: 120px ;
+  height: 150px ;
   padding: 0.5rem 1rem;
   display: flex ;
   flex-direction: column;
@@ -161,11 +162,11 @@
   }
 
   .hero-content h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -185,7 +186,7 @@
   }
 
   .hero-content .pre-title {
-    margin: 0 auto 1rem;
+    margin-right: 70px;
   }
 
   .cta-btn,
@@ -221,7 +222,7 @@
   }
 
   #hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 2.1rem;
   }
 
   .hero-content p {
@@ -243,15 +244,17 @@
   }
 
   .hero-content h1 {
-    font-size: 1.8rem;
+            font-size: 3.8rem;
+        text-align: start;
+        width: 100%;
   }
 
   #hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 2.1rem;
   }
 
   .hero-content p {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
   }
 
   .hero-buttons {

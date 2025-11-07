@@ -4,6 +4,15 @@ import { LuFacebook } from "react-icons/lu";
 import { PiWhatsappLogo } from "react-icons/pi";
 
 const Footer = () => {
+    // ✅ Smooth scroll function
+  const handleScrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMenuOpen(false); // Close mobile nav after click
+    }
+  };
+
   return (
     <>
       <footer>
@@ -19,16 +28,16 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <button>About me</button>
+              <button onClick={() => handleScrollToSection("about")}>About me</button>
             </li>
             <li>
-              <button>Portfolio</button>
+              <button onClick={() => handleScrollToSection("portfolio")}>Portfolio</button>
             </li>
             <li>
-              <button>Services</button>
+              <button onClick={() => handleScrollToSection("services")}>Services</button>
             </li>
             <li>
-              <button>Testimonials</button>
+              <button onClick={() => handleScrollToSection("testimonials")}>Testimonials</button>
             </li>
           </ul>
         </div>
