@@ -68,7 +68,7 @@ const Footer = () => {
           <div>
             © 2025 Priya - Professional Makeup Artist. All rights reserved.
           </div>
-          <div>Made with Love ❤️ For beauty</div>
+          <div>Made with Love ❤️ For beauty PS Creations</div>
         </div>
       </footer>
     </>
